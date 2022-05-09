@@ -38,10 +38,7 @@ public class Dumper implements ClassFileTransformer {
             }
 
             if(!className.contains("$")) {
-                System.out.println("\n--------------------------------------------------------------------------------------");
-                System.out.println("");
                 System.out.println("Dumping: " + className + ".class");
-                System.out.println("");
             }
 
 
@@ -68,14 +65,11 @@ public class Dumper implements ClassFileTransformer {
             fos.write(classBuf);
 
             fos.close();
-            System.out.println("--------------------------------------------------------------------------------------");
-            System.out.println("SUCCESS");
-            System.out.println("--------------------------------------------------------------------------------------");
         } catch (Exception exp) {
             exp.printStackTrace();
             System.out.println("--------------------------------------------------------------------------------------");
             System.out.println("FAILED");
             System.out.println("--------------------------------------------------------------------------------------");
-        }
+       }
     }
 }
